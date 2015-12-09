@@ -8,4 +8,11 @@
 
     <!--ciminal的标题输入提醒-->
     <string name="hint_criminal_title">请输入犯错的标题</string>
+
+    <!--ciminal的标题-->
+    <string name="criminal_title">标题</string>
+    <!--ciminal的描述-->
+    <string name="criminal_description">描述</string>
+    <!--ciminal是否解决-->
+    <string name="criminal_solved">是否解决?</string>
 </resources>
