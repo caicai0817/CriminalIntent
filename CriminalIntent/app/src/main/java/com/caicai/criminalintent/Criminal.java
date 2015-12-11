@@ -13,8 +13,8 @@ public class Criminal {
     private Date mData;
     private boolean isSolved;
 
-    public Date getmData() {
-        return mData;
+    public String getmData() {
+        return utils.getFormatDate(mData);
     }
 
     public void setIsSolved(boolean isSolved) {
@@ -39,5 +39,12 @@ public class Criminal {
         return mTitle;
     }
 
+    public void setmTitle(String mTitle) {
+        this.mTitle = mTitle;
+    }
 
+    @Override
+    public String toString() {
+        return mTitle;
+    }
 }

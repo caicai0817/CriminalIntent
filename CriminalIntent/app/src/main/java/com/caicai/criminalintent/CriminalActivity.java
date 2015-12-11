@@ -2,7 +2,7 @@ package com.caicai.criminalintent;
 
 import android.support.v4.app.Fragment;
 
-public class MainActivity extends SingleFragmentActivity {
+public class CriminalActivity extends SingleFragmentActivity {
 
     /**
      * 创建依附的fragment

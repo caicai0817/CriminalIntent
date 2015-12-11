@@ -2,6 +2,7 @@ package com.caicai.criminalintent;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * Author : caicai
@@ -9,9 +10,13 @@ import java.util.Date;
  * Description:工具类
  */
 public class utils {
-    public static String getFormatDate(Date date){
 
-        String formatDate = new SimpleDateFormat("").format(date);
+    public static final String CAICAI = "caicai";
+    public static String getFormatDate(Date date) {
+
+        String formatString = "EEEE, MMM dd, yyyy";
+
+        String formatDate = new SimpleDateFormat(formatString, Locale.ENGLISH).format(date);
         return formatDate;
     }
 }

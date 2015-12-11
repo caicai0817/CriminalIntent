@@ -43,7 +43,7 @@ public class CriminalFragment extends Fragment implements TextWatcher, View.OnCl
         criminalTitle.addTextChangedListener(this);
 
         desButton = (Button) view.findViewById(R.id.fragment_criminal_desription);
-        desButton.setText(mCriminal.getmData().toString()+"");
+        desButton.setText(mCriminal.getmData());
         desButton.setOnClickListener(this);
 
         solvedCheckBox = (CheckBox) view.findViewById(R.id.fragment_criminal_solved);
