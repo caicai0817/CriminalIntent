@@ -12,12 +12,14 @@
             android:label="@string/app_name" >
         </activity>
 
-        <activity android:name=".CriminalListActivity">
+        <activity android:name=".CriminalListActivity" android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".CriminalPagerActivity" android:label="@string/app_name"/>
     </application>
 
 </manifest>

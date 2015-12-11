@@ -1,5 +1,6 @@
 package com.caicai.criminalintent;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.UUID;
 
@@ -7,7 +8,7 @@ import java.util.UUID;
  * Created by caicai on 2015/12/8 12:09.
  * 模型层代码
  */
-public class Criminal {
+public class Criminal implements Serializable{
     private UUID mId;
     private String mTitle;
     private Date mData;

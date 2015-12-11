@@ -1,6 +1,7 @@
 package com.caicai.criminalintent;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 /**
  * Author : caicai
@@ -35,5 +36,14 @@ public class CriminalLab {
 
     public ArrayList<Criminal> getmCriminals() {
         return mCriminals;
+    }
+
+    public Criminal getCriminalByUUID(UUID uuid) {
+        for (Criminal criminal : mCriminals) {
+            if (criminal.getmId().equals(uuid)){
+                return criminal;
+            }
+        }
+        return null;
     }
 }

@@ -1,5 +1,6 @@
 package com.caicai.criminalintent;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
@@ -26,7 +27,7 @@ public class CriminalListFragment extends ListFragment {
         //ArrayAdapter<Criminal> adapter = new ArrayAdapter<Criminal>(getActivity(), android.R.layout.simple_list_item_1, mCriminals);
 
         //使用自定义Adapter和布局
-        CriminalAdapter adapter = new CriminalAdapter(getActivity(),mCriminals);
+        CriminalAdapter adapter = new CriminalAdapter(getActivity(), mCriminals);
         setListAdapter(adapter);
     }
 
@@ -35,5 +36,10 @@ public class CriminalListFragment extends ListFragment {
         super.onListItemClick(l, v, position, id);
         Criminal criminal = (Criminal) getListAdapter().getItem(position);
         Log.e(utils.CAICAI, criminal.getmTitle() + "点击了");
+
+        Intent intent = new Intent();
+        intent.putExtra(Config.ITEM_FLAG, criminal.getmId());
+        intent.setClass(getActivity(), CriminalPagerActivity.class);
+        startActivity(intent);
     }
 }

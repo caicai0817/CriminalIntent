@@ -13,6 +13,8 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 
+import java.util.UUID;
+
 /**
  * Author : caicai
  * Time : 2015/12/9 11:24
@@ -32,6 +34,16 @@ public class CriminalFragment extends Fragment implements TextWatcher, View.OnCl
         super.onCreate(savedInstanceState);
         mCriminal = new Criminal();
 
+//        Intent intent = getActivity().getIntent();
+//        if (intent != null) {
+//            UUID uuid = (UUID) intent.getSerializableExtra(Config.ITEM_FLAG);
+//            mCriminal = CriminalLab.getsCriminalLab().getCriminalByUUID(uuid);
+//        }
+
+        UUID criminalId = (UUID) getArguments().getSerializable(Config.ITEM_FLAG);
+
+        mCriminal = CriminalLab.getsCriminalLab().getCriminalByUUID(criminalId);
+
     }
 
     @Nullable
@@ -40,6 +52,7 @@ public class CriminalFragment extends Fragment implements TextWatcher, View.OnCl
         View view = inflater.inflate(R.layout.fragment_criminal, container, false);
 
         criminalTitle = (EditText) view.findViewById(R.id.fragment_criminal_title);
+        criminalTitle.setText(mCriminal.getmTitle());
         criminalTitle.addTextChangedListener(this);
 
         desButton = (Button) view.findViewById(R.id.fragment_criminal_desription);
@@ -47,6 +60,7 @@ public class CriminalFragment extends Fragment implements TextWatcher, View.OnCl
         desButton.setOnClickListener(this);
 
         solvedCheckBox = (CheckBox) view.findViewById(R.id.fragment_criminal_solved);
+        solvedCheckBox.setChecked(mCriminal.isSolved());
         solvedCheckBox.setOnCheckedChangeListener(this);
         return view;
     }
@@ -89,5 +103,16 @@ public class CriminalFragment extends Fragment implements TextWatcher, View.OnCl
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         mCriminal.setIsSolved(isChecked);
+    }
+
+    public static CriminalFragment getInstance(UUID criminalId){
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(Config.ITEM_FLAG, criminalId);
+
+
+        CriminalFragment fragment = new CriminalFragment();
+        fragment.setArguments(bundle);
+
+        return fragment;
     }
 }
