@@ -39,7 +39,7 @@ public class CriminalAdapter extends ArrayAdapter {
         itemIsSolved = (CheckBox) convertView.findViewById(R.id.item_list_isSolved);
 
         itemTitle.setText(criminal.getmTitle());
-        itemDes.setText(criminal.getmData());
+        itemDes.setText(utils.getFormatDate(criminal.getmData()));
         itemIsSolved.setChecked(criminal.isSolved());
 
         return convertView;

@@ -3,6 +3,7 @@ package com.caicai.criminalintent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -25,6 +26,8 @@ public class CriminalFragment extends Fragment implements TextWatcher, View.OnCl
     private EditText criminalTitle;
     private Button desButton;
     private CheckBox solvedCheckBox;
+
+    private static final String DIALOG_DTAE = "date";
 
 
     private Criminal mCriminal;
@@ -56,7 +59,7 @@ public class CriminalFragment extends Fragment implements TextWatcher, View.OnCl
         criminalTitle.addTextChangedListener(this);
 
         desButton = (Button) view.findViewById(R.id.fragment_criminal_desription);
-        desButton.setText(mCriminal.getmData());
+        desButton.setText(utils.getFormatDate(mCriminal.getmData()));
         desButton.setOnClickListener(this);
 
         solvedCheckBox = (CheckBox) view.findViewById(R.id.fragment_criminal_solved);
@@ -91,7 +94,17 @@ public class CriminalFragment extends Fragment implements TextWatcher, View.OnCl
 
     @Override
     public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.fragment_criminal_desription:
 
+                FragmentManager fm = getActivity().getSupportFragmentManager();
+//                CriminalDialogFragment dialog = new CriminalDialogFragment();
+
+                CriminalDialogFragment dialog = CriminalDialogFragment.getInstance(mCriminal.getmData());
+                dialog.show(fm,DIALOG_DTAE);
+
+                break;
+        }
     }
 
     /**
@@ -105,7 +118,7 @@ public class CriminalFragment extends Fragment implements TextWatcher, View.OnCl
         mCriminal.setIsSolved(isChecked);
     }
 
-    public static CriminalFragment getInstance(UUID criminalId){
+    public static CriminalFragment getInstance(UUID criminalId) {
         Bundle bundle = new Bundle();
         bundle.putSerializable(Config.ITEM_FLAG, criminalId);
 

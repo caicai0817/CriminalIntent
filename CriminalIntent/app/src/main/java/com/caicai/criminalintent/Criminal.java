@@ -14,8 +14,9 @@ public class Criminal implements Serializable{
     private Date mData;
     private boolean isSolved;
 
-    public String getmData() {
-        return utils.getFormatDate(mData);
+    public Date getmData() {
+//        return utils.getFormatDate(mData);
+        return mData;
     }
 
     public void setIsSolved(boolean isSolved) {

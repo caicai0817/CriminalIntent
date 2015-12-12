@@ -7,4 +7,6 @@ package com.caicai.criminalintent;
  */
 public class Config {
     public static String ITEM_FLAG = "item_flag";
+    /*每条item的时间参数*/
+    public static String ITEM_TIME_TRANS = "item_time_trans";
 }

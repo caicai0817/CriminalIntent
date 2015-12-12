@@ -15,4 +15,9 @@
     <string name="criminal_description">描述</string>
     <!--ciminal是否解决-->
     <string name="criminal_solved">是否解决?</string>
+
+    <!--dialog日期-->
+    <string name="dialog_fragment_date">选择日期</string>
+    <!--dialog确认按钮-->
+    <string name="dialog_fragment_ok">确定</string>
 </resources>
