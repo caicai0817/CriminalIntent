@@ -27,10 +27,15 @@ public class Criminal implements Serializable{
         return isSolved;
     }
 
+    public void setmData(Date mData) {
+        this.mData = mData;
+    }
+
     public Criminal() {
         //生成唯一标识
         mId = UUID.randomUUID();
         mData = new Date();
+
     }
 
     public UUID getmId() {

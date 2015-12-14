@@ -1,5 +1,7 @@
 package com.caicai.criminalintent;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,6 +16,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 
+import java.util.Date;
 import java.util.UUID;
 
 /**
@@ -101,6 +104,10 @@ public class CriminalFragment extends Fragment implements TextWatcher, View.OnCl
 //                CriminalDialogFragment dialog = new CriminalDialogFragment();
 
                 CriminalDialogFragment dialog = CriminalDialogFragment.getInstance(mCriminal.getmData());
+
+                //将criminalfragment设为criminaldialogfragment的目标
+                dialog.setTargetFragment(CriminalFragment.this,Config.DIALOG2CRIMINAL_REQUEST);
+
                 dialog.show(fm,DIALOG_DTAE);
 
                 break;
@@ -127,5 +134,25 @@ public class CriminalFragment extends Fragment implements TextWatcher, View.OnCl
         fragment.setArguments(bundle);
 
         return fragment;
+    }
+
+    /**
+     * 接收从dialogfragment传递过来的参数
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+      if (resultCode != Activity.RESULT_OK){
+          return;
+      }
+
+        if (requestCode == Config.DIALOG2CRIMINAL_REQUEST){
+            Date date = (Date) data.getSerializableExtra(Config.ITEM_TIME_TRANS);
+            mCriminal.setmData(date);
+
+            desButton.setText(utils.getFormatDate(mCriminal.getmData()));
+        }
     }
 }

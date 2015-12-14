@@ -9,4 +9,7 @@ public class Config {
     public static String ITEM_FLAG = "item_flag";
     /*每条item的时间参数*/
     public static String ITEM_TIME_TRANS = "item_time_trans";
+
+    /*dialog到criminal的请求码*/
+    public static int DIALOG2CRIMINAL_REQUEST = 0;
 }

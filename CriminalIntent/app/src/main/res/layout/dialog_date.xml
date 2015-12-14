@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+   <!-- android:datePickerMode="spinner":迫使datepicker以5.0以下的模式显示-->
+
+    <!--android:theme="@style/MyCalendarView"-->
+
 <DatePicker xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/dialog_date_datepicker"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:calendarViewShown = "false"
+    android:theme="@style/MyCalendarView"
     android:orientation="horizontal">
 
 </DatePicker>

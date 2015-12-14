@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyCalendarColor">
+        <item name="android:colorAccent">#ff0000</item>
+    </style>
+
+    <!--<item name="android:background">#00ffff</item>-->
+    <!--<item name="android:colorAccent">#ff00ff</item>-->
+    <style name="MyCalendarView" parent="@android:style/Widget.CalendarView">
+        <item name="android:showWeekNumber">true</item>
+        <item name="android:minDate">01/01/2016</item>
+        <item name="android:maxDate">12/31/2100</item>
+        <item name="android:shownWeekCount">6</item>
+        <item name="android:selectedWeekBackgroundColor">#ff0000</item>
+        <item name="android:focusedMonthDateColor">#00ff00</item>
+        <item name="android:unfocusedMonthDateColor">#0000ff</item>
+        <item name="android:weekNumberColor">#ffff00</item>
+        <item name="android:weekSeparatorLineColor">#00ffff</item>
+    </style>
+</resources>
