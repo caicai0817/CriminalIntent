@@ -12,4 +12,10 @@ public class Config {
 
     /*dialog到criminal的请求码*/
     public static int DIALOG2CRIMINAL_REQUEST = 0;
+
+    /*dialog到criminal的请求码*/
+    public static int TIME_PICKER_REQUEST = 1;
+
+    /*timepicker的时间参数*/
+    public static String TIME_PICKER_TRANS = "time_picker_trans";
 }

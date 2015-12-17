@@ -1,4 +1,4 @@
-package com.caicai.criminalintent;
+package com.caicai.criminalintent.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
+
+import com.caicai.criminalintent.Config;
+import com.caicai.criminalintent.Criminal;
+import com.caicai.criminalintent.fragment.CriminalFragment;
+import com.caicai.criminalintent.CriminalLab;
+import com.caicai.criminalintent.R;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -64,7 +70,7 @@ public class CriminalPagerActivity extends FragmentActivity {
                 Criminal criminal = mCriminals.get(position);
                 if (criminal.getmTitle() != null) {
                     setTitle(criminal.getmTitle());
-                    Log.e("caicai",criminal.getmTitle());
+                    Log.e("caicai", "pager选中的item" + criminal.getmTitle());
                 }
             }
 

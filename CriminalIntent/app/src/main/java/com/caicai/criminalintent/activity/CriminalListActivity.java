@@ -1,6 +1,8 @@
-package com.caicai.criminalintent;
+package com.caicai.criminalintent.activity;
 
 import android.support.v4.app.Fragment;
+
+import com.caicai.criminalintent.fragment.CriminalListFragment;
 
 /**
  * Author : caicai

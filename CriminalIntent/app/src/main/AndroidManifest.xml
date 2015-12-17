@@ -8,18 +8,21 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".CriminalActivity"
+            android:name=".activity.CriminalActivity"
             android:label="@string/app_name" >
         </activity>
 
-        <activity android:name=".CriminalListActivity" android:label="@string/app_name">
+        <activity android:name=".activity.CriminalListActivity" android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".CriminalPagerActivity" android:label="@string/app_name"/>
+        <activity android:name=".activity.CriminalPagerActivity" android:label="@string/app_name"/>
+
+        <activity android:name=".meitu.MainActivity">
+        </activity>
     </application>
 
 </manifest>

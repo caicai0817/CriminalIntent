@@ -1,6 +1,8 @@
-package com.caicai.criminalintent;
+package com.caicai.criminalintent.fragment;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -16,6 +18,13 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 
+import com.caicai.criminalintent.Config;
+import com.caicai.criminalintent.Criminal;
+import com.caicai.criminalintent.CriminalLab;
+import com.caicai.criminalintent.R;
+import com.caicai.criminalintent.utils;
+
+import java.sql.Time;
 import java.util.Date;
 import java.util.UUID;
 
@@ -28,7 +37,10 @@ public class CriminalFragment extends Fragment implements TextWatcher, View.OnCl
 
     private EditText criminalTitle;
     private Button desButton;
+    private Button timePickerButton;
+    private Button oneButton;
     private CheckBox solvedCheckBox;
+    private Time mTime;
 
     private static final String DIALOG_DTAE = "date";
 
@@ -64,6 +76,12 @@ public class CriminalFragment extends Fragment implements TextWatcher, View.OnCl
         desButton = (Button) view.findViewById(R.id.fragment_criminal_desription);
         desButton.setText(utils.getFormatDate(mCriminal.getmData()));
         desButton.setOnClickListener(this);
+
+        timePickerButton = (Button) view.findViewById(R.id.fragment_criminal_timepicker);
+        timePickerButton.setOnClickListener(this);
+
+        oneButton = (Button) view.findViewById(R.id.exercise_one_button);
+        oneButton.setOnClickListener(this);
 
         solvedCheckBox = (CheckBox) view.findViewById(R.id.fragment_criminal_solved);
         solvedCheckBox.setChecked(mCriminal.isSolved());
@@ -109,6 +127,43 @@ public class CriminalFragment extends Fragment implements TextWatcher, View.OnCl
                 dialog.setTargetFragment(CriminalFragment.this,Config.DIALOG2CRIMINAL_REQUEST);
 
                 dialog.show(fm,DIALOG_DTAE);
+
+                break;
+
+            case R.id.fragment_criminal_timepicker:
+
+                android.app.FragmentManager fragmentManager = getActivity().getFragmentManager();
+
+                TimePickerFragment timeDialog = TimePickerFragment.getInstance(mTime);
+
+//                timeDialog.setTargetFragment(CriminalFragment.this,Config.TIME_PICKER_REQUEST);
+
+                timeDialog.show(fragmentManager,"show");
+
+                break;
+
+            case R.id.exercise_one_button:
+                new AlertDialog.Builder(getActivity()).setPositiveButton("date", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        FragmentManager fm = getActivity().getSupportFragmentManager();
+
+                        CriminalDialogFragment criminaldialog = CriminalDialogFragment.getInstance(mCriminal.getmData());
+
+                        criminaldialog.setTargetFragment(CriminalFragment.this,Config.DIALOG2CRIMINAL_REQUEST);
+
+                        criminaldialog.show(fm,DIALOG_DTAE);
+                    }
+                }).setNeutralButton("time", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        android.app.FragmentManager fragmentManager = getActivity().getFragmentManager();
+
+                        TimePickerFragment timeDialog = TimePickerFragment.getInstance(mTime);
+
+                        timeDialog.show(fragmentManager,"show");
+                    }
+                }).create().show();
 
                 break;
         }

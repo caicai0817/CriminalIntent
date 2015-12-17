@@ -20,4 +20,15 @@
     <string name="dialog_fragment_date">选择日期</string>
     <!--dialog确认按钮-->
     <string name="dialog_fragment_ok">确定</string>
+
+    <!--timepicker按钮-->
+    <string name="exercise_timepicker">TimePicker</string>
+    <!--onebutton-->
+    <string name="exercise_onebutton">onebutton</string>
+
+    <!--仿美团-->
+    <string name="good_dishes">美食</string>
+    <string name="main_tab1">全城</string>
+    <string name="main_tab2">离我最近</string>
+    <string name="main_tab3">筛选</string>
 </resources>

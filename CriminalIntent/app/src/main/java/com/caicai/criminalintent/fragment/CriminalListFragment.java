@@ -1,4 +1,4 @@
-package com.caicai.criminalintent;
+package com.caicai.criminalintent.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,13 @@ import android.support.v4.app.ListFragment;
 import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
+
+import com.caicai.criminalintent.Config;
+import com.caicai.criminalintent.Criminal;
+import com.caicai.criminalintent.CriminalAdapter;
+import com.caicai.criminalintent.CriminalLab;
+import com.caicai.criminalintent.activity.CriminalPagerActivity;
+import com.caicai.criminalintent.utils;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.caicai.criminalintent;
+package com.caicai.criminalintent.fragment;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -11,6 +11,9 @@ import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.view.View;
 import android.widget.DatePicker;
+
+import com.caicai.criminalintent.Config;
+import com.caicai.criminalintent.R;
 
 import java.util.Calendar;
 import java.util.Date;
