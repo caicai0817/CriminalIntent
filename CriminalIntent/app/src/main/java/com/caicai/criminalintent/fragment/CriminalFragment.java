@@ -18,11 +18,11 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 
-import com.caicai.criminalintent.Config;
-import com.caicai.criminalintent.Criminal;
-import com.caicai.criminalintent.CriminalLab;
+import com.caicai.criminalintent.config.Config;
+import com.caicai.criminalintent.model.Criminal;
+import com.caicai.criminalintent.model.CriminalLab;
 import com.caicai.criminalintent.R;
-import com.caicai.criminalintent.utils;
+import com.caicai.criminalintent.util.utils;
 
 import java.sql.Time;
 import java.util.Date;

@@ -7,12 +7,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 
-import com.caicai.criminalintent.Config;
-import com.caicai.criminalintent.Criminal;
-import com.caicai.criminalintent.CriminalAdapter;
-import com.caicai.criminalintent.CriminalLab;
+import com.caicai.criminalintent.config.Config;
+import com.caicai.criminalintent.model.Criminal;
+import com.caicai.criminalintent.adapter.CriminalAdapter;
+import com.caicai.criminalintent.model.CriminalLab;
 import com.caicai.criminalintent.activity.CriminalPagerActivity;
-import com.caicai.criminalintent.utils;
+import com.caicai.criminalintent.util.utils;
 
 import java.util.ArrayList;
 

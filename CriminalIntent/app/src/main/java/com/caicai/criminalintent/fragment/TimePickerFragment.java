@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TimePicker;
 
-import com.caicai.criminalintent.Config;
+import com.caicai.criminalintent.config.Config;
 import com.caicai.criminalintent.R;
 
 import java.sql.Time;

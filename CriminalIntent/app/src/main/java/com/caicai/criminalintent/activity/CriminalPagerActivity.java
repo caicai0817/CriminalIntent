@@ -9,10 +9,10 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 
-import com.caicai.criminalintent.Config;
-import com.caicai.criminalintent.Criminal;
+import com.caicai.criminalintent.config.Config;
+import com.caicai.criminalintent.model.Criminal;
 import com.caicai.criminalintent.fragment.CriminalFragment;
-import com.caicai.criminalintent.CriminalLab;
+import com.caicai.criminalintent.model.CriminalLab;
 import com.caicai.criminalintent.R;
 
 import java.util.ArrayList;

@@ -3,7 +3,7 @@ package com.caicai.criminalintent.activity;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 
-import com.caicai.criminalintent.Config;
+import com.caicai.criminalintent.config.Config;
 import com.caicai.criminalintent.fragment.CriminalFragment;
 
 import java.util.UUID;
