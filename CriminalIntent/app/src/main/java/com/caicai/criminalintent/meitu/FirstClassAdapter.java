@@ -11,10 +11,6 @@ import com.caicai.criminalintent.R;
 
 import java.util.List;
 
-/**
- * 一级分类（即左侧菜单）的adapter
- * Created by hanj on 14-9-25.
- */
 public class FirstClassAdapter extends BaseAdapter {
     private Context context;
     private List<FirstClassItem> list;
@@ -52,7 +48,6 @@ public class FirstClassAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        //选中和没选中时，设置不同的颜色
         if (position == selectedPosition){
             convertView.setBackgroundResource(R.color.popup_right_bg);
         }else{

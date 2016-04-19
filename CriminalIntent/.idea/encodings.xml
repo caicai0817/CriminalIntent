@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/caicai/criminalintent/meitu/FirstClassAdapter.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/caicai/criminalintent/meitu/FirstClassItem.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/caicai/criminalintent/meitu/MainActivity.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/caicai/criminalintent/meitu/ScreenUtils.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/caicai/criminalintent/meitu/SecondClassAdapter.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/caicai/criminalintent/meitu/SecondClassItem.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/anim" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/arrow_right.png" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/selector_left_normal.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_hellomoon.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/left_listview_item.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/popup_layout.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/right_listview_item.xml" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

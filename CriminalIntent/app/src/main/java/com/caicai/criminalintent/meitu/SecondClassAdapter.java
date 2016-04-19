@@ -10,11 +10,6 @@ import android.widget.TextView;
 import com.caicai.criminalintent.R;
 
 import java.util.List;
-
-/**
- * 二级分类（即右侧菜单）的adapter
- * Created by hanj on 14-9-25.
- */
 public class SecondClassAdapter extends BaseAdapter {
     private Context context;
     private List<SecondClassItem> list;

@@ -2,10 +2,6 @@ package com.caicai.criminalintent.meitu;
 
 import java.util.List;
 
-/**
- * 一级分类，相当于左侧菜单
- * Created by hanj on 14-9-25.
- */
 public class FirstClassItem {
     private int id;
     private String name;

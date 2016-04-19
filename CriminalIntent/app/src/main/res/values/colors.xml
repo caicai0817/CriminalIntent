@@ -7,5 +7,9 @@
     <color name="popup_right_bg_selected">#ccc</color>
 
     <color name="div_gray">#ccc</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="gray_content_text_color">#666666</color>
+    <color name="title">#0599a3</color>
 
 </resources>

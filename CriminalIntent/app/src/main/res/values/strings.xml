@@ -31,4 +31,6 @@
     <string name="main_tab1">全城</string>
     <string name="main_tab2">离我最近</string>
     <string name="main_tab3">筛选</string>
+    <string name="title_activity_multi_listview">MultiListviewActivity</string>
+    <string name="title_activity_builder">BuilderActivity</string>
 </resources>
