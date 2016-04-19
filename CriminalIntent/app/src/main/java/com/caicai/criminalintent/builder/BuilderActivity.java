@@ -70,6 +70,8 @@ public class BuilderActivity extends AppCompatActivity {
                         Toast.makeText(BuilderActivity.this, "cancel", Toast.LENGTH_SHORT).show();
                     }
                 });
+
+
                 AlertDialog dialog = builder.create();
                 dialog.setTitle("title");
                 TextView subTitle = new TextView(BuilderActivity.this);
