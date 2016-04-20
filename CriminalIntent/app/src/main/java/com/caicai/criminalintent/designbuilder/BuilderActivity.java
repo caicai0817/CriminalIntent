@@ -1,4 +1,4 @@
-package com.caicai.criminalintent.builder;
+package com.caicai.criminalintent.designbuilder;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;

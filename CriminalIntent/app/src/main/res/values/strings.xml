@@ -33,4 +33,5 @@
     <string name="main_tab3">筛选</string>
     <string name="title_activity_multi_listview">MultiListviewActivity</string>
     <string name="title_activity_builder">BuilderActivity</string>
+    <string name="title_activity_observer">ObserverActivity</string>
 </resources>
