@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/contentPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ececec" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/rgTab"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#ffffff"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/main_tab_opportunity"
+                style="@style/main_tab_bottom"
+                android:checked="true"
+                android:drawableTop="@drawable/icon_home"
+                android:paddingLeft="0dp"
+                android:text="首页"
+                android:textColor="@drawable/txtcolor_gray2oran_sel" />
+
+            <RadioButton
+                android:id="@+id/main_tab_process"
+                style="@style/main_tab_bottom"
+                android:checked="false"
+                android:drawableTop="@drawable/icon_meassage"
+                android:paddingLeft="0dp"
+                android:text="消息"
+                android:textColor="@drawable/txtcolor_gray2oran_sel" />
+
+            <RadioButton
+                android:id="@+id/main_tab_freetel"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/icon_square"
+                android:paddingLeft="0dp"
+                android:text="发现"
+                android:textColor="@drawable/txtcolor_gray2oran_sel" />
+
+            <RadioButton
+                android:id="@+id/main_tab_mine"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/icon_selfinfo"
+                android:paddingLeft="0dp"
+                android:text="我"
+                android:textColor="@drawable/txtcolor_gray2oran_sel" />
+
+        </RadioGroup>
+    </RelativeLayout>
+
+</LinearLayout>
+

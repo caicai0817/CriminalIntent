@@ -12,4 +12,7 @@
     <color name="gray_content_text_color">#666666</color>
     <color name="title">#0599a3</color>
 
+    <color name="orange">#ff8200</color>
+    <color name="txt_gray">#565656</color>
+
 </resources>

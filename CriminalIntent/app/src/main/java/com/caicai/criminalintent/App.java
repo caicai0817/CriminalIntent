@@ -5,6 +5,8 @@ import android.app.Application;
 import android.content.pm.PackageManager;
 import android.util.Log;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
 import com.caicai.criminalintent.config.Config;
 import com.easemob.chat.EMChat;
 
@@ -17,9 +19,15 @@ import java.util.List;
  * @Description: application
  */
 public class App extends Application {
+
+    public static RequestQueue requestQueue;
+
     @Override
     public void onCreate() {
         super.onCreate();
+
+        //初始化requestQueue对象
+        requestQueue = Volley.newRequestQueue(this.getApplicationContext());
 
         int pid = android.os.Process.myPid();
         String processAppName = getAppName(pid);
@@ -65,5 +73,14 @@ public class App extends Application {
             }
         }
         return processName;
+    }
+
+    /**
+     * 得到RequestQueue对象
+     *
+     * @return
+     */
+    public static RequestQueue getHttpRequest() {
+        return requestQueue;
     }
 }
