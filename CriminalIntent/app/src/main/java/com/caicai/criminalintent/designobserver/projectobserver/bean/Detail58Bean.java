@@ -1,4 +1,4 @@
-package com.caicai.criminalintent.designobserver.projectobserver;
+package com.caicai.criminalintent.designobserver.projectobserver.bean;
 
 /**
  * @Author : caicai

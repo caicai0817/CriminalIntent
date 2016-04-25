@@ -1,4 +1,4 @@
-package com.caicai.criminalintent.designobserver.projectobserver;
+package com.caicai.criminalintent.designobserver.projectobserver.fragment;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,12 +9,16 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.caicai.criminalintent.R;
+import com.caicai.criminalintent.designobserver.projectobserver.bean.Detail58Bean;
+import com.caicai.criminalintent.designobserver.projectobserver.controller.DetailController;
+import com.caicai.criminalintent.designobserver.projectobserver.search.ResultKey;
+import com.caicai.criminalintent.designobserver.projectobserver.search.SearchResolver;
+import com.caicai.criminalintent.designobserver.projectobserver.search.Searcher;
+import com.caicai.criminalintent.designobserver.projectobserver.ViewPage;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Observable;
 
-public class MineFragment extends Fragment implements ViewPage {
+public class HomeFragment extends Fragment implements ViewPage {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -25,8 +29,9 @@ public class MineFragment extends Fragment implements ViewPage {
     private View view;
     private TextView showView;
 
-    public static MineFragment newInstance(String param1, String param2) {
-        MineFragment fragment = new MineFragment();
+
+    public static HomeFragment newInstance(String param1, String param2) {
+        HomeFragment fragment = new HomeFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -34,7 +39,7 @@ public class MineFragment extends Fragment implements ViewPage {
         return fragment;
     }
 
-    public MineFragment() {
+    public HomeFragment() {
     }
 
     @Override
@@ -49,23 +54,18 @@ public class MineFragment extends Fragment implements ViewPage {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        Map<String, String> params = new HashMap<String, String>();
-        params.put("imei", "867323023729559");
-        params.put("medel", "MI4LTE");
-        params.put("deviceName", "Xiaomi MI");
-        params.put("osVersion", "4.4.4");Searcher.INSTANCE.requestByPost(getActivity(), "http://sptrack.58supin.com/app/update", null, params, ResultKey.ABTEST);
+//        Searcher.INSTANCE.requestByPost(getActivity(), "http://10.252.153.60:8080/home.txt", null, null, ResultKey.HOME);
+        Searcher.INSTANCE.requestByPost(getActivity(), "http://10.0.3.15:8080/home.txt", null, null, ResultKey.HOME);
 
 
-        view = View.inflate(getActivity(), R.layout.fragment_mine, null);
+        view = View.inflate(getActivity(), R.layout.fragment_home, null);
         return view;
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-        showView = (TextView) view.findViewById(R.id.mine_tv);
-
+        showView = (TextView) view.findViewById(R.id.home_tv);
     }
 
     @Override
@@ -92,17 +92,18 @@ public class MineFragment extends Fragment implements ViewPage {
         mDetailController.unRegisterView(this);
         // 将SearchModel和Controller断开
         mDetailController.unRegistSearchModel();
-
     }
 
     @Override
     public void update(Observable observable, Object data) {
+
         switch (Integer.parseInt(data.toString())) {
             case ResultKey.ERROR:
+                showView.setText("404");
                 break;
-            case ResultKey.ABTEST:
-                UpdateBean bean = (UpdateBean) SearchResolver.getInstance().querySearchResult(ResultKey.ABTEST, 0);
-                showView.setText(bean.version);
+            case ResultKey.HOME:
+                Detail58Bean bean = (Detail58Bean) SearchResolver.getInstance().querySearchResult(ResultKey.HOME, 0);
+                showView.setText(bean.caicai);
                 break;
         }
     }

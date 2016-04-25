@@ -1,5 +1,9 @@
-package com.caicai.criminalintent.designobserver.projectobserver;
+package com.caicai.criminalintent.designobserver.projectobserver.search;
 
+import com.caicai.criminalintent.designobserver.projectobserver.bean.Detail58Bean;
+import com.caicai.criminalintent.designobserver.projectobserver.bean.MessageBean;
+import com.caicai.criminalintent.designobserver.projectobserver.bean.OtherBean;
+import com.caicai.criminalintent.designobserver.projectobserver.bean.UpdateBean;
 import com.google.gson.Gson;
 
 import java.util.Observable;
@@ -23,6 +27,8 @@ public class SearchModel extends Observable implements Searcher.SearcherListener
     private int mErrorNo = 0;
     private UpdateBean mUpdateBean;
     private Detail58Bean mDetailBean;
+    private OtherBean mOtherBean;
+    private MessageBean mMessageBean;
 
     public static SearchModel getInstance() {
         if (sSearchModel == null) {
@@ -45,7 +51,7 @@ public class SearchModel extends Observable implements Searcher.SearcherListener
 
     void setSearchResultObject(int type, Object object) {
         mResults[type] = object;
-        if (type == ResultKey.ABTEST) {
+        if (type == ResultKey.MINE) {
 
             //根据需求添加到缓存
             //addToCache((ABTestBean) object, mResults[ResultKey.ABTEST]);
@@ -97,26 +103,46 @@ public class SearchModel extends Observable implements Searcher.SearcherListener
             case ResultKey.ERROR:
                 notifyObservers(ResultKey.ERROR);
                 break;
-            case ResultKey.ABTEST:
+            case ResultKey.MINE:
                 try {
-//                    JsonParser.setJson2Obj(mUpdateBean, json);
                     Gson gson = new Gson();
                     mUpdateBean = gson.fromJson(json, UpdateBean.class);
-                    mSearchResults[ResultKey.ABTEST] = json;
-                    mResults[ResultKey.ABTEST] = mUpdateBean;
-                    notifyObservers(ResultKey.ABTEST);
+                    mSearchResults[ResultKey.MINE] = json;
+                    mResults[ResultKey.MINE] = mUpdateBean;
+                    notifyObservers(ResultKey.MINE);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
                 break;
-            case ResultKey.DETAIL58:
+            case ResultKey.HOME:
                 try {
-//                    JsonParser.setJson2Obj(mUpdateBean, json);
                     Gson gson = new Gson();
                     mDetailBean = gson.fromJson(json, Detail58Bean.class);
-                    mSearchResults[ResultKey.DETAIL58] = json;
-                    mResults[ResultKey.DETAIL58] = mDetailBean;
-                    notifyObservers(ResultKey.DETAIL58);
+                    mSearchResults[ResultKey.HOME] = json;
+                    mResults[ResultKey.HOME] = mDetailBean;
+                    notifyObservers(ResultKey.HOME);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                break;
+            case ResultKey.MESSAGE:
+                try {
+                    Gson gson = new Gson();
+                    mMessageBean = gson.fromJson(json, MessageBean.class);
+                    mSearchResults[ResultKey.MESSAGE] = json;
+                    mResults[ResultKey.MESSAGE] = mMessageBean;
+                    notifyObservers(ResultKey.MESSAGE);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                break;
+            case ResultKey.SQUARE:
+                try {
+                    Gson gson = new Gson();
+                    mOtherBean = gson.fromJson(json, OtherBean.class);
+                    mSearchResults[ResultKey.SQUARE] = json;
+                    mResults[ResultKey.SQUARE] = mOtherBean;
+                    notifyObservers(ResultKey.SQUARE);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

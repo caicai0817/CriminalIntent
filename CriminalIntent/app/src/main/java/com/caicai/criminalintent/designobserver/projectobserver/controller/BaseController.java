@@ -1,7 +1,9 @@
-package com.caicai.criminalintent.designobserver.projectobserver;
+package com.caicai.criminalintent.designobserver.projectobserver.controller;
 
 import android.os.Handler;
 import android.os.Looper;
+
+import com.caicai.criminalintent.designobserver.projectobserver.ViewPage;
 
 import java.util.Observable;
 import java.util.Observer;

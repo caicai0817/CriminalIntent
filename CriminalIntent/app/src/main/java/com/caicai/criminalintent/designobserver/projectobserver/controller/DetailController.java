@@ -1,4 +1,7 @@
-package com.caicai.criminalintent.designobserver.projectobserver;
+package com.caicai.criminalintent.designobserver.projectobserver.controller;
+
+import com.caicai.criminalintent.designobserver.projectobserver.search.SearchResolver;
+import com.caicai.criminalintent.designobserver.projectobserver.ViewPage;
 
 import java.util.Observable;
 

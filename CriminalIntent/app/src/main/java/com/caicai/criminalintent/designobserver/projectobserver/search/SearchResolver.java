@@ -1,4 +1,4 @@
-package com.caicai.criminalintent.designobserver.projectobserver;
+package com.caicai.criminalintent.designobserver.projectobserver.search;
 
 import java.util.Observable;
 import java.util.Observer;
@@ -59,7 +59,6 @@ public final class SearchResolver {
      *                   可选参数 {@link SearchResolver}和{@link SearchResolver}
      * @return 对应搜索类型的搜索结果
      */
-    @Deprecated
     public Object querySearchResult(int searchType, int formatType) {
 
 //        if (RESULT_TYPE_OBJ == formatType) {

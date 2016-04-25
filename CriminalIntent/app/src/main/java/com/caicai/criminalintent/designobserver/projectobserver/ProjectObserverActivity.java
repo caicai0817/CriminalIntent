@@ -3,10 +3,20 @@ package com.caicai.criminalintent.designobserver.projectobserver;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.FrameLayout;
 import android.widget.RadioGroup;
 
 import com.caicai.criminalintent.R;
+import com.caicai.criminalintent.designobserver.projectobserver.fragment.HomeFragment;
+import com.caicai.criminalintent.designobserver.projectobserver.fragment.MessageFragment;
+import com.caicai.criminalintent.designobserver.projectobserver.fragment.MineFragment;
+import com.caicai.criminalintent.designobserver.projectobserver.fragment.SquareFragment;
+
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
+import java.util.Enumeration;
 
 public class ProjectObserverActivity extends AppCompatActivity {
 
@@ -25,6 +35,8 @@ public class ProjectObserverActivity extends AppCompatActivity {
         setContentView(R.layout.activity_project_observer);
 
         contentPanel = (FrameLayout) this.findViewById(R.id.contentPanel);
+
+        Log.e("caicai", getLocalIpAddress());
 
         rgTab = (RadioGroup) this.findViewById(R.id.rgTab);
 
@@ -88,6 +100,30 @@ public class ProjectObserverActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    /**
+     * 获取Android本机IP地址
+     *
+     * @return
+     */
+    private String getLocalIpAddress() {
+        try {
+            for (Enumeration<NetworkInterface> en = NetworkInterface
+                    .getNetworkInterfaces(); en.hasMoreElements();) {
+                NetworkInterface intf = en.nextElement();
+                for (Enumeration<InetAddress> enumIpAddr = intf
+                        .getInetAddresses(); enumIpAddr.hasMoreElements();) {
+                    InetAddress inetAddress = enumIpAddr.nextElement();
+                    if (!inetAddress.isLoopbackAddress()) {
+                        return inetAddress.getHostAddress().toString();
+                    }
+                }
+            }
+        } catch (SocketException ex) {
+//            Log.e("WifiPreference IpAddress", ex.toString());
+        }
+        return null;
     }
 
 }

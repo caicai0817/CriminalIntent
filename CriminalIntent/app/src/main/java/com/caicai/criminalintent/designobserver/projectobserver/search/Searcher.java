@@ -1,4 +1,4 @@
-package com.caicai.criminalintent.designobserver.projectobserver;
+package com.caicai.criminalintent.designobserver.projectobserver.search;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -37,8 +37,8 @@ public enum Searcher {
             @Override
             public void onMyError(VolleyError error) {
                 mSearcherListener.onGetResult(ResultKey.ERROR, null);
-                Toast.makeText(context, "return error !!!!!!!!", Toast.LENGTH_SHORT);
-            }
+            Toast.makeText(context, "return error !!!!!!!!", Toast.LENGTH_SHORT);
+        }
         });
     }
 
