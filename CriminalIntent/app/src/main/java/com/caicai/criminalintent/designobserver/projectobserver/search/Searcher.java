@@ -37,8 +37,8 @@ public enum Searcher {
             @Override
             public void onMyError(VolleyError error) {
                 mSearcherListener.onGetResult(ResultKey.ERROR, null);
-            Toast.makeText(context, "return error !!!!!!!!", Toast.LENGTH_SHORT);
-        }
+                Toast.makeText(context, "return error !!!!!!!!", Toast.LENGTH_SHORT);
+            }
         });
     }
 

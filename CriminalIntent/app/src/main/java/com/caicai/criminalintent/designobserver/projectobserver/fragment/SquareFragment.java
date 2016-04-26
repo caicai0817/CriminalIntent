@@ -52,7 +52,7 @@ public class SquareFragment extends Fragment implements ViewPage {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        Searcher.INSTANCE.requestByPost(getActivity(), "http://10.252.153.60:8080/square.txt", null, null, ResultKey.SQUARE);
+        Searcher.INSTANCE.requestByPost(getActivity(), "http://10.0.3.2:8080/square.txt", null, null, ResultKey.SQUARE);
 
         view = View.inflate(getActivity(), R.layout.fragment_square, null);
         return view;
@@ -97,7 +97,7 @@ public class SquareFragment extends Fragment implements ViewPage {
                 showView.setText("404");
                 break;
             case ResultKey.SQUARE:
-                OtherBean bean = (OtherBean) SearchResolver.getInstance().querySearchResult(ResultKey.SQUARE, 0);
+                OtherBean bean = (OtherBean) SearchResolver.getInstance().querySearchResult(ResultKey.SQUARE);
                 showView.setText(bean.topic);
                 break;
         }

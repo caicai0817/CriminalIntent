@@ -108,7 +108,7 @@ public class MineFragment extends Fragment implements ViewPage {
             case ResultKey.ERROR:
                 break;
             case ResultKey.MINE:
-                UpdateBean bean = (UpdateBean) SearchResolver.getInstance().querySearchResult(ResultKey.MINE, 0);
+                UpdateBean bean = (UpdateBean) SearchResolver.getInstance().querySearchResult(ResultKey.MINE);
                 showView.setText(bean.version);
                 break;
         }

@@ -25,15 +25,15 @@ public final class SearchResolver {
 
     /**
      * 注册监听者
-     * @param observer 要注册的监听者(需要实现{@link Observer})
-     */
+     * @param observer 要注册的监听者需要实现Observer
+    */
     public void regSearchModel(Observer observer) {
         SearchModel.getInstance().addObserver(observer);
     }
 
     /**
      * 取消监听注册
-     * @param observer 要取消注册的监听者(需要实现{@link Observer})
+     * @param observer 要取消注册的监听者
      */
     public void unRegSearchModel(Observer observer) {
         SearchModel.getInstance().deleteObserver(observer);
@@ -42,7 +42,6 @@ public final class SearchResolver {
     /**
      * 获得SearchModel的实例
      *
-     * 发现有部分代码需要得到SearchModel实例，所以提供这个方法
      * @return SearchModel实例
      */
     public Observable getSearchModelInstance() {
@@ -51,15 +50,10 @@ public final class SearchResolver {
 
     /**
      * 查询对应搜索类型的搜索结果
-     * 注意，此函数已经废弃。此函数用于获取旧检索实体。在新PB检索中，以无旧检索实体。</p>
-     * 请使用querySearchResultCache(int)} 获取到Cache.Item，内部可以分别获取到新旧实体和ResultType
      * @param searchType 搜索结果类型，
-     *                   可选参数参考{@link ResultKey}类
-     * @param formatType 输出结果格式，支持json和对象,
-     *                   可选参数 {@link SearchResolver}和{@link SearchResolver}
      * @return 对应搜索类型的搜索结果
      */
-    public Object querySearchResult(int searchType, int formatType) {
+    public Object querySearchResult(int searchType) {
 
 //        if (RESULT_TYPE_OBJ == formatType) {
             return SearchModel.getInstance().getSearchResultObject(searchType);
@@ -71,7 +65,6 @@ public final class SearchResolver {
      * 查询搜索结果
      *
      * @param searchType 搜索结果类型，
-     *                   可选参数参考{@link ResultKey}类
      * @return
      */
     public String querySearchResultCache(int searchType) {
