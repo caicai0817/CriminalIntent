@@ -1,14 +1,13 @@
 package com.caicai.criminalintent.designobserver.myObserver;
 
 import java.util.ArrayList;
-import java.util.Observable;
 
 /**
  * @Author : caicai
  * @Time : 2016/4/26 15:24
  * @Description: 请用一句话描述
  */
-public class WeatherData extends Observable {//implements Subject
+public class WeatherData implements Subject {//  extends Observable
 
     private ArrayList<MObserver> observers;
     private float temp;
@@ -20,7 +19,7 @@ public class WeatherData extends Observable {//implements Subject
         observers = new ArrayList<MObserver>();
     }
 
-    /*//注册观察者时,加到observers后面
+    //注册观察者时,加到observers后面
     @Override
     public void registerObserver(MObserver observer) {
         observers.add(observer);
@@ -42,7 +41,7 @@ public class WeatherData extends Observable {//implements Subject
             MObserver mObserver = observers.get(i);
             mObserver.update(temp,humidity,pressure);
         }
-    }*/
+    }
 
     //在气象站获取到数据
     public void setMeasurements(float temp,float humidity,float pressure){
@@ -54,11 +53,11 @@ public class WeatherData extends Observable {//implements Subject
     }
 
     private void measurementsChanged() {
-        setChanged();
+//        setChanged();
         notifyObservers();
     }
 
-    //使用拉的方式获取数据
+    /*//使用拉的方式获取数据
     public float getTemp(){
         return temp;
     }
@@ -69,5 +68,5 @@ public class WeatherData extends Observable {//implements Subject
     //使用拉的方式获取数据
     public float getPressure(){
         return pressure;
-    }
+    }*/
 }

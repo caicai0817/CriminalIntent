@@ -1,6 +1,7 @@
 package com.caicai.criminalintent.designobserver.projectobserver.fragment;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,12 +10,13 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.caicai.criminalintent.R;
+import com.caicai.criminalintent.designobserver.projectobserver.ExtendsActivity;
+import com.caicai.criminalintent.designobserver.projectobserver.ViewPage;
 import com.caicai.criminalintent.designobserver.projectobserver.bean.Detail58Bean;
 import com.caicai.criminalintent.designobserver.projectobserver.controller.DetailController;
 import com.caicai.criminalintent.designobserver.projectobserver.search.ResultKey;
 import com.caicai.criminalintent.designobserver.projectobserver.search.SearchResolver;
 import com.caicai.criminalintent.designobserver.projectobserver.search.Searcher;
-import com.caicai.criminalintent.designobserver.projectobserver.ViewPage;
 
 import java.util.Observable;
 
@@ -54,10 +56,7 @@ public class HomeFragment extends Fragment implements ViewPage {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-//        Searcher.INSTANCE.requestByPost(getActivity(), "http://10.252.153.60:8080/home.txt", null, null, ResultKey.HOME);
-//        Searcher.INSTANCE.requestByPost(getActivity(), "http://10.0.3.2:8080/home.txt", null, null, ResultKey.HOME);
-        Searcher.INSTANCE.requestByPost(getActivity(), "http://localhost:8080/home.txt", null, null, ResultKey.HOME);
-
+        Searcher.INSTANCE.requestByPost(getActivity(), "http://10.252.153.60:8080/home.txt", "home", null, ResultKey.HOME);
 
         view = View.inflate(getActivity(), R.layout.fragment_home, null);
         return view;
@@ -67,6 +66,12 @@ public class HomeFragment extends Fragment implements ViewPage {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         showView = (TextView) view.findViewById(R.id.home_tv);
+        showView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ExtendsActivity.class));
+            }
+        });
     }
 
     @Override

@@ -9,12 +9,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.caicai.criminalintent.R;
+import com.caicai.criminalintent.designobserver.projectobserver.ViewPage;
+import com.caicai.criminalintent.designobserver.projectobserver.bean.UpdateBean;
 import com.caicai.criminalintent.designobserver.projectobserver.controller.DetailController;
 import com.caicai.criminalintent.designobserver.projectobserver.search.ResultKey;
 import com.caicai.criminalintent.designobserver.projectobserver.search.SearchResolver;
 import com.caicai.criminalintent.designobserver.projectobserver.search.Searcher;
-import com.caicai.criminalintent.designobserver.projectobserver.bean.UpdateBean;
-import com.caicai.criminalintent.designobserver.projectobserver.ViewPage;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -60,7 +60,7 @@ public class MineFragment extends Fragment implements ViewPage {
         params.put("medel", "MI4LTE");
         params.put("deviceName", "Xiaomi MI");
         params.put("osVersion", "4.4.4");
-        Searcher.INSTANCE.requestByPost(getActivity(), "http://sptrack.58supin.com/app/update", null, params, ResultKey.MINE);
+        Searcher.INSTANCE.requestByPost(getActivity(), "http://sptrack.58supin.com/app/update", "mine", params, ResultKey.MINE);
 
 
         view = View.inflate(getActivity(), R.layout.fragment_mine, null);

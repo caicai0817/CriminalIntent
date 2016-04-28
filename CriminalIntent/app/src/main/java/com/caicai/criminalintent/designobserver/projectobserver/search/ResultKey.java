@@ -17,5 +17,7 @@ public class ResultKey {
     public static final int MESSAGE = 3;
     //square
     public static final int SQUARE = 4;
+    //extends
+    public static final int EXTENDS = 5;
 
 }

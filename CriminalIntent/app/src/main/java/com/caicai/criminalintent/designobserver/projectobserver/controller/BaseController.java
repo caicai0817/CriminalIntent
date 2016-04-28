@@ -19,12 +19,12 @@ public class BaseController extends Observable implements Observer, Controller {
 
     @Override
     public void registerView(ViewPage view) {
-        addObserver(view);
+//        addObserver(view);
     }
 
     @Override
     public void unRegisterView(ViewPage view) {
-        deleteObserver(view);
+//        deleteObserver(view);
     }
 
     @Override

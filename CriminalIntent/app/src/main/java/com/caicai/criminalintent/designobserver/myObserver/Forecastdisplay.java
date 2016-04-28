@@ -2,25 +2,22 @@ package com.caicai.criminalintent.designobserver.myObserver;
 
 import android.util.Log;
 
-import java.util.Observable;
-import java.util.Observer;
-
 /**
  * @Author : caicai
  * @Time : 2016/4/26 15:39
  * @Description: 请用一句话描述
  */
-public class Forecastdisplay implements Observer, DisplayElement {//MObserver
+public class Forecastdisplay implements MObserver, DisplayElement {// Observer
     private float temp;
     private float humidity;
     private float pressure;
-    private Observable weatherData;//Subject
+    private Subject weatherData;// Observable
 
     //注册观察者
-    public Forecastdisplay(Observable weatherData) {//Subject
+    public Forecastdisplay(Subject weatherData) {// Observable
         this.weatherData = weatherData;
-//        weatherData.registerObserver(this);
-        weatherData.addObserver(this);
+        weatherData.registerObserver(this);
+//        weatherData.addObserver(this);
     }
 
     @Override
@@ -28,7 +25,7 @@ public class Forecastdisplay implements Observer, DisplayElement {//MObserver
         Log.e("caicai", "forecast: temp:" + temp + "--humidity:" + humidity + "--pressure:" + pressure);
     }
 
-    @Override
+    /*@Override
     public void update(Observable observable, Object data) {
         if (observable instanceof WeatherData) {
             WeatherData weatherData = (WeatherData) observable;
@@ -37,13 +34,13 @@ public class Forecastdisplay implements Observer, DisplayElement {//MObserver
             this.pressure = weatherData.getPressure();
             display();
         }
-    }
+    }*/
 
-    /*@Override
+    @Override
     public void update(float temp, float humidity, float pressure) {
         this.temp = temp;
         this.humidity = humidity;
         this.pressure = pressure;
         display();
-    }*/
+    }
 }

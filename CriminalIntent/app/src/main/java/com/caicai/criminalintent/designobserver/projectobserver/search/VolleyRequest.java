@@ -20,7 +20,7 @@ public class VolleyRequest {
 
     public static void RequestByPost(Context context, String url, String tag,
                                      final Map<String, String> params, VolleyInterface volleyInterface) {
-//        AppApplication.getHttpRequest().cancelAll(tag);
+        App.getHttpRequest().cancelAll(tag);
         stringRequest = new JsonObjectRequest(Method.POST, url,
                 volleyInterface.successListener(),
                 volleyInterface.errorListener()) {
@@ -46,6 +46,7 @@ public class VolleyRequest {
         System.setProperty("http.keepAlive", "false");
         stringRequest.setRetryPolicy(new DefaultRetryPolicy(20000, 0, 2.0f));
         stringRequest.setTag(tag);
+        stringRequest.setShouldCache(false);
         App.getHttpRequest().add(stringRequest);
         //volley本身已初始化过
         //AppApplication.getHttpRequest().start();

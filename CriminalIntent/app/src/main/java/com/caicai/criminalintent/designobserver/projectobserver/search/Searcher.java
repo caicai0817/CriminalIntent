@@ -2,7 +2,6 @@ package com.caicai.criminalintent.designobserver.projectobserver.search;
 
 import android.content.Context;
 import android.text.TextUtils;
-import android.widget.Toast;
 
 import com.android.volley.VolleyError;
 
@@ -27,7 +26,6 @@ public enum Searcher {
             public void onMySuccess(JSONObject result) {
                 if (TextUtils.isEmpty(result.toString())) {
                     mSearcherListener.onGetResult(ResultKey.ERROR, null);
-                    Toast.makeText(context, "return null ------", Toast.LENGTH_SHORT);
                 } else {
                     mSearcherListener.onGetResult(flag, result.toString());
 
@@ -37,7 +35,6 @@ public enum Searcher {
             @Override
             public void onMyError(VolleyError error) {
                 mSearcherListener.onGetResult(ResultKey.ERROR, null);
-                Toast.makeText(context, "return error !!!!!!!!", Toast.LENGTH_SHORT);
             }
         });
     }

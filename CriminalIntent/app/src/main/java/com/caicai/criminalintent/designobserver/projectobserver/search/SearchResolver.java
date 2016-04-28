@@ -25,14 +25,16 @@ public final class SearchResolver {
 
     /**
      * 注册监听者
+     *
      * @param observer 要注册的监听者需要实现Observer
-    */
+     */
     public void regSearchModel(Observer observer) {
         SearchModel.getInstance().addObserver(observer);
     }
 
     /**
      * 取消监听注册
+     *
      * @param observer 要取消注册的监听者
      */
     public void unRegSearchModel(Observer observer) {
@@ -41,8 +43,6 @@ public final class SearchResolver {
 
     /**
      * 获得SearchModel的实例
-     *
-     * @return SearchModel实例
      */
     public Observable getSearchModelInstance() {
         return SearchModel.getInstance();
@@ -50,15 +50,11 @@ public final class SearchResolver {
 
     /**
      * 查询对应搜索类型的搜索结果
-     * @param searchType 搜索结果类型，
-     * @return 对应搜索类型的搜索结果
      */
     public Object querySearchResult(int searchType) {
 
-//        if (RESULT_TYPE_OBJ == formatType) {
-            return SearchModel.getInstance().getSearchResultObject(searchType);
+        return SearchModel.getInstance().getSearchResultObject(searchType);
 
-//        return SearchModel.getInstance().getSearchReuslt(searchType);
     }
 
     /**

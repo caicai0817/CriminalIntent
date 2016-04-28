@@ -3,7 +3,11 @@ package com.caicai.criminalintent.designobserver.projectobserver;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.FrameLayout;
+import android.widget.ListView;
 import android.widget.RadioGroup;
 
 import com.caicai.criminalintent.R;
@@ -30,9 +34,6 @@ public class ProjectObserverActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_project_observer);
-
-        //测试自定义观察者
-        testMyObserver();
 
         contentPanel = (FrameLayout) this.findViewById(R.id.contentPanel);
 
@@ -98,6 +99,12 @@ public class ProjectObserverActivity extends AppCompatActivity {
             }
         });
 
+        //测试自定义观察者
+        testMyObserver();
+
+        //源码Adapter
+        ListView lv = new ListView(this);
+        lv.setAdapter(new MyAdapter());
     }
 
     private void testMyObserver() {
@@ -109,5 +116,30 @@ public class ProjectObserverActivity extends AppCompatActivity {
         data.setMeasurements(55,66,77);
         data.setMeasurements(19,28,37);
     }
+
+    private class MyAdapter extends BaseAdapter{
+
+        @Override
+        public int getCount() {
+            return 0;
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            return null;
+        }
+    }
+
+
 
 }
