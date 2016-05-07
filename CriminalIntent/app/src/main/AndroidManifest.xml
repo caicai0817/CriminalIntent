@@ -33,24 +33,24 @@
         <activity
             android:name=".activity.MultiListviewActivity"
             android:label="@string/title_activity_multi_listview"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".designbuilder.BuilderActivity"
-            android:label="@string/title_activity_builder"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".designobserver.ObserverActivity"
-            android:label="@string/title_activity_observer"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".designobserver.projectobserver.ProjectObserverActivity"
-            android:label="@string/title_activity_project_observer"
             android:theme="@style/AppTheme.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        >
+        <activity
+            android:name=".designbuilder.BuilderActivity"
+            android:label="@string/title_activity_builder"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".designobserver.projectobserver.ProjectObserverActivity"
+            android:label="@string/title_activity_project_observer"
+            android:theme="@style/AppTheme.NoActionBar">
+
         </activity>
         <activity
             android:name=".designobserver.projectobserver.ExtendsActivity"
