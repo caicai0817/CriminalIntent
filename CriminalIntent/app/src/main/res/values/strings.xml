@@ -36,4 +36,6 @@
     <string name="title_activity_observer">ObserverActivity</string>
     <string name="title_activity_project_observer">ProjectObserverActivity</string>
     <string name="title_activity_extends">ExtendsActivity</string>
+    <string name="title_activity_xml">XmlActivity</string>
+    <string name="title_activity_dialog_resume">DialogResumeActivity</string>
 </resources>
