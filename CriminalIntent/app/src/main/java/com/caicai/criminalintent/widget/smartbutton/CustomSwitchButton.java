@@ -1,4 +1,4 @@
-package com.caicai.criminalintent.challenge.SwitchButton;
+package com.caicai.criminalintent.widget.smartbutton;
 
 import android.annotation.TargetApi;
 import android.content.Context;

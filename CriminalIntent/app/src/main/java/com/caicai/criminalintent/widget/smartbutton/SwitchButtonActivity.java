@@ -1,4 +1,4 @@
-package com.caicai.criminalintent.challenge.SwitchButton;
+package com.caicai.criminalintent.widget.smartbutton;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
