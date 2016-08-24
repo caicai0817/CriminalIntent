@@ -39,4 +39,6 @@
     <string name="title_activity_xml">XmlActivity</string>
     <string name="title_activity_dialog_resume">DialogResumeActivity</string>
     <string name="title_activity_switch_button">SwitchButtonActivity</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="title_activity_test_launch">TestLaunchActivity</string>
 </resources>
