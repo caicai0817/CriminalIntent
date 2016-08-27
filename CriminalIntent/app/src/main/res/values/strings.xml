@@ -41,4 +41,6 @@
     <string name="title_activity_switch_button">SwitchButtonActivity</string>
     <string name="title_activity_web_view">WebViewActivity</string>
     <string name="title_activity_test_launch">TestLaunchActivity</string>
+    <string name="title_activity_fresco">FrescoActivity</string>
+    <string name="title_activity_rx_java">RxJavaActivity</string>
 </resources>

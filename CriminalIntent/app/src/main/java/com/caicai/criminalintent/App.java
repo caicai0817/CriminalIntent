@@ -9,6 +9,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 import com.caicai.criminalintent.config.Config;
 import com.easemob.chat.EMChat;
+import com.facebook.drawee.backends.pipeline.Fresco;
 
 import java.util.Iterator;
 import java.util.List;
@@ -43,11 +44,60 @@ public class App extends Application {
             return;
         }
 
+        //fresco初始化
+        Fresco.initialize(this);
+
+
         EMChat.getInstance().init(this);
 
         //debugMode == true 时为打开，sdk 会在log里输入调试信息,在做代码混淆的时候需要设置成false
         EMChat.getInstance().setDebugMode(true);//在做打包混淆时，要关闭debug模式，避免消耗不必要的资源
     }
+
+    //热修复
+//    public String inject(String libPath) {
+//
+//        boolean hasBaseDexClassLoader = true;
+//
+//        try {
+//
+//            Class.forName("dalvik.system.BaseDexClassLoader");
+//
+//        } catch (ClassNotFoundException e) {
+//
+//            hasBaseDexClassLoader = false;
+//
+//        }
+//
+//        if (hasBaseDexClassLoader) {
+//
+//            PathClassLoader pathClassLoader = (PathClassLoader)getClassLoader();
+//
+//            DexClassLoader dexClassLoader = new DexClassLoader(libPath, getDir("dex", 0).getAbsolutePath(), libPath, getClassLoader());
+//
+//            try {
+//
+//                Object dexElements = combineArray(getDexElements(getPathList(pathClassLoader)), getDexElements(getPathList(dexClassLoader)));
+//
+//                Object pathList = getPathList(pathClassLoader);
+//
+//                setField(pathList, pathList.getClass(), "dexElements", dexElements);
+//
+//                return "SUCCESS";
+//
+//            } catch (Throwable e) {
+//
+//                e.printStackTrace();
+//
+//                return android.util.Log.getStackTraceString(e);
+//
+//            }
+//
+//        }
+//
+//        return "SUCCESS";
+//
+//    }
 
     /**
      * 获取进程名

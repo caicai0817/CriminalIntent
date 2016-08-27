@@ -62,11 +62,24 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".widget.popup.PopupView"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".WebViewActivity"
             android:label="@string/title_activity_web_view"
             android:launchMode="singleInstance"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".TestLaunchActivity"
+            android:label="@string/title_activity_test_launch"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".fresco.FrescoActivity"
+            android:label="@string/title_activity_fresco"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".rxjava.RxJavaActivity"
+            android:label="@string/title_activity_rx_java"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -74,10 +87,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".TestLaunchActivity"
-            android:label="@string/title_activity_test_launch"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

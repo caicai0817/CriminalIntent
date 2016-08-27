@@ -29,6 +29,25 @@ dependencies {
     //rxjava
     compile 'io.reactivex:rxjava:1.0.14'
     compile 'io.reactivex:rxandroid:1.0.1'
+    //fresco
+    compile 'com.facebook.fresco:fresco:0.12.0'
+    // 在 API < 14 上的机器支持 WebP 时，需要添加
+    compile 'com.facebook.fresco:animated-base-support:0.12.0'
+    // 支持 GIF 动图，需要添加
+    compile 'com.facebook.fresco:animated-gif:0.12.0'
+    // 支持 WebP （静态图+动图），需要添加
+    compile 'com.facebook.fresco:animated-webp:0.12.0'
+    compile 'com.facebook.fresco:webpsupport:0.12.0'
+    // 仅支持 WebP 静态图，需要添加
+    compile 'com.facebook.fresco:webpsupport:0.12.0'
+
+    //retrofit
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.jakewharton:butterknife:7.0.1'
 
 
 
