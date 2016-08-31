@@ -57,5 +57,11 @@
         android:text="post receiver"
         android:textSize="16sp" />
 
+    <Button android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="btn动画"
+        android:layout_gravity="bottom"/>
+
 
 </LinearLayout>
