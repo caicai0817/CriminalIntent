@@ -48,6 +48,14 @@
         android:gravity="center"
         android:text="retrofit"
         android:textSize="16sp" />
+    <TextView
+        android:id="@+id/receiver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:text="post receiver"
+        android:textSize="16sp" />
 
 
 </LinearLayout>

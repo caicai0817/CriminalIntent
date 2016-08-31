@@ -1,6 +1,7 @@
 package com.caicai.criminalintent.rxjava;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -33,6 +34,7 @@ public class RxJavaActivity extends AppCompatActivity implements View.OnClickLis
     private ImageView iv;
     private TextView retrofitTv;
     private TextView retrofitTv1;
+    private TextView br;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,9 @@ public class RxJavaActivity extends AppCompatActivity implements View.OnClickLis
         retrofitTv = (TextView) findViewById(R.id.retrofit);
         retrofitTv1 = (TextView) findViewById(R.id.retrofit1);
         retrofitTv.setOnClickListener(this);
+
+        br = (TextView) findViewById(R.id.receiver);
+        br.setOnClickListener(this);
     }
 
     @Override
@@ -93,6 +98,10 @@ public class RxJavaActivity extends AppCompatActivity implements View.OnClickLis
                 break;
             case R.id.retrofit:
                 getMovies();
+                break;
+            case R.id.receiver:
+                Intent intent = new Intent("caicai");
+                sendOrderedBroadcast(intent, null, null, null, 0, "中国古代史", null);
                 break;
         }
     }
