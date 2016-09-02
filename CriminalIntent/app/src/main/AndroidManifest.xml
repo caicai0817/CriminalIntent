@@ -67,7 +67,7 @@
             android:name=".WebViewActivity"
             android:label="@string/title_activity_web_view"
             android:launchMode="singleInstance"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".TestLaunchActivity"
             android:label="@string/title_activity_test_launch"
@@ -75,11 +75,16 @@
         <activity
             android:name=".fresco.FrescoActivity"
             android:label="@string/title_activity_fresco"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".rxjava.RxJavaActivity"
             android:label="@string/title_activity_rx_java"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".AnimationActivity"
+            android:label="@string/title_activity_animation"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -88,39 +93,38 @@
             </intent-filter>
         </activity>
 
-
-        <!--广播接收者-->
+        <!-- 广播接收者 -->
         <receiver android:name=".receiver.CallReceiver">
             <intent-filter>
-                <action android:name="android.intent.action.NEW_OUTGOING_CALL"/>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
             </intent-filter>
         </receiver>
         <receiver android:name=".receiver.InstallAndUnstall">
             <intent-filter>
-                <action android:name="android.intent.action.PACKAGE_ADDED"></action>
-                <action android:name="android.intent.action.PACKAGE_REMOVED"></action>
-                <data android:scheme="package"/>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
             </intent-filter>
         </receiver>
-
         <receiver android:name=".receiver.LevelReserver1">
             <intent-filter android:priority="1000">
-                <action android:name="caicai"/>
+                <action android:name="caicai" />
             </intent-filter>
         </receiver>
         <receiver android:name=".receiver.LevelReserver2">
             <intent-filter android:priority="500">
-                <action android:name="caicai"/>
+                <action android:name="caicai" />
             </intent-filter>
         </receiver>
         <receiver android:name=".receiver.LevelReserver3">
             <intent-filter android:priority="100">
-                <action android:name="caicai"/>
+                <action android:name="caicai" />
             </intent-filter>
         </receiver>
         <receiver android:name=".receiver.LevelReserver4">
             <intent-filter android:priority="10">
-                <action android:name="caicai"/>
+                <action android:name="caicai" />
             </intent-filter>
         </receiver>
     </application>

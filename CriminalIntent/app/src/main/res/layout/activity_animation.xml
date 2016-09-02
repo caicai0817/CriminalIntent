@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.caicai.criminalintent.AnimationActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/animation_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="顺序"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/animation_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="倒序"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/animation_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="停止"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/animation_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="代码实现"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/animation_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/property_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/dialog_resume_show"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"/>
+
+</RelativeLayout>
