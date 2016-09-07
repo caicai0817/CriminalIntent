@@ -75,16 +75,18 @@
         <activity
             android:name=".fresco.FrescoActivity"
             android:label="@string/title_activity_fresco"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".rxjava.RxJavaActivity"
             android:label="@string/title_activity_rx_java"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".AnimationActivity"
+            android:name=".animation.AnimationActivity"
             android:label="@string/title_activity_animation"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".animation.AdvanceAnimActivity"
+            android:label="@string/title_activity_advance_anim"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -127,6 +129,11 @@
                 <action android:name="caicai" />
             </intent-filter>
         </receiver>
+
+        <activity
+            android:name=".fileself.FileActivity"
+            android:label="@string/title_activity_file"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

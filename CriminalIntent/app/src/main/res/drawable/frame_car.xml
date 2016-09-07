@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:drawable="@mipmap/car1" android:duration="500"/>
+<item android:drawable="@mipmap/car2" android:duration="500"/>
+<item android:drawable="@mipmap/car3" android:duration="500"/>
+<item android:drawable="@mipmap/car4" android:duration="500"/>
+<item android:drawable="@mipmap/car5" android:duration="500"/>
+<item android:drawable="@mipmap/car6" android:duration="500"/>
+<item android:drawable="@mipmap/car7" android:duration="500"/>
+<item android:drawable="@mipmap/car8" android:duration="500"/>
+<item android:drawable="@mipmap/car9" android:duration="500"/>
+<item android:drawable="@mipmap/car10" android:duration="500"/>
+</animation-list>

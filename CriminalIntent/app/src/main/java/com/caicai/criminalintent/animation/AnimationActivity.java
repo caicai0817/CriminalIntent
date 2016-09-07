@@ -1,4 +1,4 @@
-package com.caicai.criminalintent;
+package com.caicai.criminalintent.animation;
 
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
@@ -9,6 +9,8 @@ import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.view.animation.*;
+
+import com.caicai.criminalintent.R;
 
 public class AnimationActivity extends AppCompatActivity implements View.OnClickListener {
 

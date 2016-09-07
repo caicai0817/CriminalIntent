@@ -44,4 +44,6 @@
     <string name="title_activity_fresco">FrescoActivity</string>
     <string name="title_activity_rx_java">RxJavaActivity</string>
     <string name="title_activity_animation">AnimationActivity</string>
+    <string name="title_activity_advance_anim">AdvanceAnimActivity</string>
+    <string name="title_activity_file">FileActivity</string>
 </resources>

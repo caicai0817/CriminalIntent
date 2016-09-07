@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#dedede">
+
+    <ImageView
+        android:id="@+id/self_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/broadcast_flash" />
+
+    <!--<com.caicai.criminalintent.animation.Circle.TextSwitcherView
+        android:id="@+id/self_scroll_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="欢迎来到菜菜庄园" />-->
+
+    <TextSwitcher
+        android:id="@+id/self_ts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/self_light">
+
+    </TextSwitcher>
+
+
+</RelativeLayout>
