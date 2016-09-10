@@ -1,9 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
     android:fitsSystemWindows="true"
-    tools:context="com.caicai.criminalintent.fileself.FileActivity">
+    tools:context=".viewanimation.ViewAnimActivity">
+    <!--android:animateLayoutChanges="true"-->
+    <Button
+        android:id="@+id/xianyu_added"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加数据" />
+
+    <Button
+        android:id="@+id/xianyu_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/xianyu_added"
+        android:text="移除数据" />
+
+    <LinearLayout
+        android:id="@+id/xianyu_auto_added"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/xianyu_added">
+    </LinearLayout>
+
+    <!--<TextView
+        android:id="@+id/xianyu_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="add data"
+        android:padding="10dp"
+        android:background="#dedede"/>-->
+
+    <!--<ListView
+        android:id="@+id/xianyu_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/xianyu_tv"
+        android:layoutAnimation="@anim/layout_animation"
+        ></ListView>-->
+
+    <!-- <GridView
+         android:id="@+id/xianyu_grid"
+         android:layout_below="@+id/xianyu_tv"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:columnWidth="60dp"
+         android:gravity="center"
+         android:horizontalSpacing="10dp"
+         android:layoutAnimation="@anim/anim_gridview"
+         android:numColumns="auto_fit"
+         android:stretchMode="columnWidth"
+         android:verticalSpacing="10dp"/>-->
+
+    <ImageView
+        android:id="@+id/xianyu_circle_1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/circle1"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/xianyu_circle_2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/circle2"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/xianyu_circle_3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/circle3"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/xianyu_circle_4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/circle4"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/xianyu_circle_5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/circle5"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/xianyu_menu"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/menu" />
 </RelativeLayout>

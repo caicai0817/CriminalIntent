@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+     rowDelay:每一行动画开始的延时 取值可以使百分数和浮点数 取值意义是animation所指动画的倍数
+     columnDelay:每一列动画的延时
+     directionPriority:方向优先级
+     direction:gridview动画方向"bottom_to_top|right_to_left"从右向左从下到上
+     animation:gridview内部元素所用的动画
+-->
+<gridLayoutAnimation xmlns:android="http://schemas.android.com/apk/res/android"
+    android:animation="@anim/grid_animation"
+    android:columnDelay="60%"
+    android:directionPriority="none"
+    android:rowDelay="75%">
+
+</gridLayoutAnimation>

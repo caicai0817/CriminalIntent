@@ -88,9 +88,14 @@
             android:name=".animation.AdvanceAnimActivity"
             android:label="@string/title_activity_advance_anim"
             android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".viewanimation.ViewAnimActivity"
+            android:label="@string/title_activity_file"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -130,10 +135,7 @@
             </intent-filter>
         </receiver>
 
-        <activity
-            android:name=".fileself.FileActivity"
-            android:label="@string/title_activity_file"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+
     </application>
 
 </manifest>
