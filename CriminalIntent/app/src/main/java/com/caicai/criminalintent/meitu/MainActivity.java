@@ -40,6 +40,8 @@ public class MainActivity extends Activity {
 
     //弹出PopupWindow时，背景变暗的动画
     private Animation animIn, animOut;
+    private TextView mainTab2TV;
+    private TextView mainTab3TV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,12 +54,16 @@ public class MainActivity extends Activity {
 
         OnClickListenerImpl l = new OnClickListenerImpl();
         mainTab1TV.setOnClickListener(l);
+        mainTab2TV.setOnClickListener(l);
+        mainTab3TV.setOnClickListener(l);
 
 
     }
 
     private void findView() {
         mainTab1TV = (TextView) findViewById(R.id.main_tab1);
+        mainTab2TV = (TextView) findViewById(R.id.main_tab2);
+        mainTab3TV = (TextView) findViewById(R.id.main_tab3);
         darkView = findViewById(R.id.main_darkview);
 
         animIn = AnimationUtils.loadAnimation(this, R.anim.fade_in_anim);
@@ -102,6 +108,7 @@ public class MainActivity extends Activity {
 
         //copy
         firstList.addAll(firstList);
+        firstList.addAll(firstList);
     }
 
     //点击事件
@@ -111,6 +118,12 @@ public class MainActivity extends Activity {
         public void onClick(View view) {
             switch (view.getId()) {
                 case R.id.main_tab1:
+                    tab1OnClick();
+                    break;
+                case R.id.main_tab2:
+                    tab1OnClick();
+                    break;
+                case R.id.main_tab3:
                     tab1OnClick();
                     break;
                 default:
@@ -127,7 +140,7 @@ public class MainActivity extends Activity {
 
         popupWindow.setContentView(view);
         popupWindow.setBackgroundDrawable(new PaintDrawable());
-        popupWindow.setFocusable(true);
+        popupWindow.setFocusable(false);
 
         popupWindow.setHeight(ScreenUtils.getScreenH(this) * 2 / 3);
         popupWindow.setWidth(ScreenUtils.getScreenW(this));
@@ -265,7 +278,7 @@ public class MainActivity extends Activity {
 //
 //    private void handleResult(int firstId, int secondId, String selectedName){
 //        String text = "first id:" + firstId + ",second id:" + secondId;
-//        Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(MainUI.this, text, Toast.LENGTH_SHORT).show();
 //
 //        mainTab1TV.setText(selectedName);
 //    }

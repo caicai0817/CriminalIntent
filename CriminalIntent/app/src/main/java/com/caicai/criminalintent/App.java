@@ -2,6 +2,7 @@ package com.caicai.criminalintent;
 
 import android.app.ActivityManager;
 import android.app.Application;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.util.Log;
 
@@ -22,6 +23,7 @@ import java.util.List;
 public class App extends Application {
 
     public static RequestQueue requestQueue;
+    public static Context mContext = new App();
 
     @Override
     public void onCreate() {

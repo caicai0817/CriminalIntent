@@ -32,70 +32,68 @@
 
         <activity
             android:name=".activity.MultiListviewActivity"
-            android:label="@string/title_activity_multi_listview"
             android:theme="@style/AppTheme.NoActionBar" />
         >
         <activity
             android:name=".designbuilder.BuilderActivity"
-            android:label="@string/title_activity_builder"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".designobserver.projectobserver.ProjectObserverActivity"
-            android:label="@string/title_activity_project_observer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".designobserver.projectobserver.ExtendsActivity"
-            android:label="@string/title_activity_extends"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.XmlActivity"
-            android:label="@string/title_activity_xml"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activity.ViewPagerActivity" />
         <activity
             android:name=".activity.DialogResumeActivity"
-            android:label="@string/title_activity_dialog_resume"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".widget.smartbutton.SwitchButtonActivity"
-            android:label="@string/title_activity_switch_button"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".widget.popup.PopupView"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".WebViewActivity"
-            android:label="@string/title_activity_web_view"
             android:launchMode="singleInstance"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".TestLaunchActivity"
-            android:label="@string/title_activity_test_launch"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".fresco.FrescoActivity"
-            android:label="@string/title_activity_fresco"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".rxjava.RxJavaActivity"
-            android:label="@string/title_activity_rx_java"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".animation.AnimationActivity"
-            android:label="@string/title_activity_animation"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".animation.AdvanceAnimActivity"
-            android:label="@string/title_activity_advance_anim"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".viewanimation.ViewAnimActivity"
-            android:label="@string/title_activity_file"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".safe.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".safe.MainUI"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".safe.ZhaopinListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".widget.mgridview.GridViewActivity"
+            android:label="@string/title_activity_grid_view"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

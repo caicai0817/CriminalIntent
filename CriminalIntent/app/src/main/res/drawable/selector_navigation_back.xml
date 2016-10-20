@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--titlebar返回按钮选择器-->
+    <item android:drawable="@mipmap/navigationbar_back"></item>
+    <item android:drawable="@mipmap/navigationbar_back_highlighted" android:state_pressed="true"></item>
+</selector>

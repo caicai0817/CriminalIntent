@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigationbar"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/main_background"
+    tools:context="com.baiyanli.app.minutes.MainActivity">
+
+    <!--左侧布局-->
+    <ImageView
+        android:id="@+id/navigationbar_left_img"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:padding="12dp"
+        android:src="@drawable/selector_navigation_back"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/navigationbar_left_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@drawable/selector_navigation_back_txt"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <!--标题-->
+    <ImageView
+        android:id="@+id/navigationbar_title_img"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/supin_logo"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/navigationbar_title_txt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <!--右侧布局-->
+    <ImageView
+        android:id="@+id/navigationbar_right_img"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="12dp"
+        android:src="@mipmap/navigationbar_right"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/navigationbar_right_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@drawable/selector_navigation_back_txt"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/pray" />
+</RelativeLayout>
