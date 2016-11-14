@@ -74,13 +74,20 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".animation.AdvanceAnimActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".viewanimation.ViewAnimActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".safe.SplashActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
         <activity
             android:name=".safe.MainUI"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -91,11 +98,7 @@
             android:name=".widget.mgridview.GridViewActivity"
             android:label="@string/title_activity_grid_view"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <!-- 广播接收者 -->
