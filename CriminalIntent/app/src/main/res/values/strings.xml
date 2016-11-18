@@ -39,4 +39,5 @@
     <string name="user_login_error_unknown">未知错误</string>
     <string name="network_error">网络异常</string>
     <string name="title_activity_grid_view">GridViewActivity</string>
+    <string name="title_activity_web_js">WebJsActivity</string>
 </resources>
