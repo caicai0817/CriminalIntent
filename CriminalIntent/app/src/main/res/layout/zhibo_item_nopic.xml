@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/zhibo_no_pic_bg"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    >
+    <!--android:includeFontPadding="false"
+    android:lineSpacingMultiplier="0.9"
+    android:lineSpacingExtra="3dp"-->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="16sp"
+        android:textColor="#343434"
+        android:lineSpacingExtra="3dp"
+        android:layout_marginBottom="-6dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        >
+        <!--<TextView
+            android:id="@+id/tv_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:textColor="#ff552e"
+            android:textSize="12sp"
+            android:background="@drawable/zhibo_list_tag_bg"
+            android:layout_centerVertical="true"
+            android:text="58说"
+        />-->
+
+        <TextView
+            android:id="@+id/tv_zan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/zan"
+            android:textSize="12sp"
+            android:textColor="#717171"
+            android:drawablePadding="3dp"
+            android:layout_marginBottom="1dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_see"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:drawableLeft="@drawable/see"
+            android:textSize="12sp"
+            android:textColor="#717171"
+            android:drawablePadding="3dp"
+            android:layout_toLeftOf="@id/tv_zan"
+            android:layout_marginBottom="1dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/auto_tags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_see"
+            android:orientation="horizontal"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="20dp"
+        android:background="#e8e8e8"
+        />
+
+</LinearLayout>

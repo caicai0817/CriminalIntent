@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--职播无图-->
+    <integer name="adapter_nopic_viewholder_key">103</integer>
+    <!--职播一张图-->
+    <integer name="adapter_onepic_viewholder_key">104</integer>
+    <!--职播三张图-->
+    <integer name="adapter_multipic_viewholder_key">105</integer>
+</resources>
