@@ -1,14 +1,26 @@
 package com.caicai.criminalintent;
 
+import android.app.ActivityManager;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.util.LruCache;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.caicai.criminalintent.autolayout.ZhiboAdapter;
 import com.caicai.criminalintent.autolayout.ZhiboListItemBean;
+import com.caicai.criminalintent.sourcedesign.optimize.ImageCache;
 
+import java.lang.ref.SoftReference;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 public class TestLaunchActivity extends AppCompatActivity {
 
@@ -26,15 +38,57 @@ public class TestLaunchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_launch);
-        initData();
-        initView();
+
+        ImageView iv = (ImageView) findViewById(R.id.iv);
+//        BitmapDrawable drawable = (BitmapDrawable) iv.getDrawable();
+//
+//        Bitmap bitmap = drawable.getBitmap();
+//        int rowBytes = bitmap.getRowBytes();
+//        int height = bitmap.getHeight();
+//        long size = rowBytes * height;
+
+        BitmapFactory.Options options = new BitmapFactory.Options();
+//        options.inJustDecodeBounds = true;
+
+        Bitmap bitmap1 = BitmapFactory.decodeResource(getResources(),R.mipmap.testimg1,options);
+        iv.setImageBitmap(bitmap1);
+
+        Log.e("caicai",bitmap1.getWidth() + "---" + bitmap1.getHeight());
+
+
+//        Log.e("caicai","width" + bitmap.getWidth());
+//        Log.e("caicai","heitht" + bitmap.getHeight());
+//        Log.e("caicai",size/(1024*1024) + "");
+
+
+
+
+//        ActivityManager systemService = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+//        int memoryClass = systemService.getMemoryClass();
+//        int largeMemoryClass = systemService.getLargeMemoryClass();
+//
+//        Log.e("caicai",memoryClass + "---" + largeMemoryClass);
+
+//        Runtime rt=Runtime.getRuntime();
+//        long maxMemory=rt.maxMemory();
+//        Log.e("caicai:",Long.toString(maxMemory/(1024*1024)));
+
+
+//        initData();
+//        initView();
         //initView0();
+    }
+
+    private void demo(){
+        Set<SoftReference<Bitmap>> mReusableBitmaps;
+        LruCache<String,BitmapDrawable> mMemoryCache;
     }
 
     /**
      * 初始化数据
      */
     private void initData() {
+        HashMap<String, String> map = new HashMap<>();
         for (int i = 0; i < 50; i++) {
             ZhiboListItemBean bean = new ZhiboListItemBean();
             bean.title = titles[i % 12];
@@ -47,8 +101,8 @@ public class TestLaunchActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        ListView lv = (ListView) findViewById(R.id.test_lv);
-        lv.setAdapter(new ZhiboAdapter(this, items));
+//        ListView lv = (ListView) findViewById(R.id.test_lv);
+//        lv.setAdapter(new ZhiboAdapter(this, items));
         /*FlowLayout layout = (FlowLayout) findViewById(R.id.add_flowlayout);
         for (int i = 0; i < datas.length; i++) {
             TextView tv = new TextView(this);
